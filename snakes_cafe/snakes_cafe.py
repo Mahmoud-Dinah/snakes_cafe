@@ -32,16 +32,19 @@ Unicorn Tears
 """)
 menu = ["Wings", "Cookies", "Spring Rolls", "Salmon", "Steak", "Meat Tornado",
         "A Literal Garden", "Ice Cream", "Cake", "Pie", "Coffee", "Tea", "Unicorn Tears"]
-i = i+1
+i =+ 1
+order = ''
 order = input(">")
-print(f"{i} order of {order} have been added to your meal ")
-
-i = i+1
+while order != '':
+ print(f"{i} order of {order} have been added to your meal ")
+ break
 
 print("would you like to order any things else")
 order = input(">")
-if order.lower() != "n":
+while order.lower() != "n":
+  i = i+1
   order = input(">")
   print(f"{i} order of {order}  have been added to your meal")
+  print("would you like to order any things else? if no please press n to exit")
 else:
   print("thank you!")
